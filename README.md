@@ -1,3 +1,9 @@
+Fork of `pre-commit/action` with a fix to make it install correction on GA Windows runners (see https://github.com/actions/toolkit/issues/992), releases as `simonwiles/precommit-action@v2.0.4`.
+
+Original `README.md` follows:
+
+---
+
 **DEPRECATED** this action is in maintenance-only mode and will not be
 accepting new features.
 
