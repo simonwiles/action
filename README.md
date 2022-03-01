@@ -1,6 +1,8 @@
-Fork of `pre-commit/action` with a fix to make it install correction on GA Windows runners (see https://github.com/actions/toolkit/issues/992), releases as `simonwiles/precommit-action@v2.0.4`.
+Fork of `pre-commit/action` with a fix to make it install correction on GA Windows runners (see https://github.com/pre-commit/action/issues/141 and https://github.com/actions/toolkit/issues/992).
 
-Original `README.md` follows:
+Released as `simonwiles/precommit-action@v2.0.4`.
+
+Original `README.md` follows below:
 
 ---
 
