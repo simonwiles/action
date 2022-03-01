@@ -34,8 +34,8 @@ function addToken(url, token) {
 
 async function main() {
     await core.group('install pre-commit', async () => {
-        await exec.exec('pip', ['install', 'pre-commit']);
-        await exec.exec('pip', ['freeze', '--local']);
+        await exec.exec("python", ["-m", "pip", "install", "pre-commit"]);
+        await exec.exec("python", ["-m", "pip", "freeze", "--local"]);
     });
 
     const args = [
@@ -52,7 +52,7 @@ async function main() {
     const py = getPythonVersion();
     const cacheKey = `pre-commit-2-${hashString(py)}-${hashFile('.pre-commit-config.yaml')}`;
     const restored = await cache.restoreCache(cachePaths, cacheKey);
-    const ret = await exec.exec('pre-commit', args, {ignoreReturnCode: push});
+    const ret = await exec.exec('python', ["-m", "pre_commit", ...args], {ignoreReturnCode: push});
     if (!restored) {
         try {
             await cache.saveCache(cachePaths, cacheKey);
